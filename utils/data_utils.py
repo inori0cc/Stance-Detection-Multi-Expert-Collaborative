@@ -89,17 +89,17 @@ class DatesetReader:
             if i < lines_count[0]:
 
 #                 s = 0
-#                 if int(stance) == 0:#unrelated
+#                 if int(stance) == 0:
 #                     continue
-#                 elif int(stance) == 1: #support
+#                 elif int(stance) == 1:
 #                     s = 2
-#                 elif int(stance) == 2:#comment
+#                 elif int(stance) == 2:
 #                     s = 1
 #                 else:
 #                     s = 0
 #                 stance = s
 
-                stance = int(stance) # + 1  
+                stance = int(stance) + 1  
             else:
                 stance = -9
 
@@ -138,146 +138,6 @@ class DatesetReader:
             'vast': {
                 'train': './proceed_dataset/vast/train.tp-5wd-6.masked',
                 'test': './proceed_dataset/vast/vast_test.tp-5wd-6.masked'
-            },
-            'fvast': {
-                'train': './proceed_dataset/vast/train.tp-5wd-6.masked',
-                'test': './proceed_dataset/vast/few_vast_test.tp-5wd-6.masked'
-            },
-            'dt_la': {
-                'train': './proceed_dataset/dt.masked',
-                'test': './proceed_dataset/la.masked'
-            },
-            'at_af': {
-                'train': './proceed_dataset/at.masked',
-                'test': './proceed_dataset/covid19/AF.tp-5wd-6.masked'
-            },
-            'af_sc': {
-                'train': './proceed_dataset/covid19/AF.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/SC.tp-5wd-6.masked'
-            },
-            'naf_af': {
-                'train': './proceed_dataset/covid19/naf_af.csv',
-                'test': './proceed_dataset/covid19/AF.tp-5wd-6.masked'
-            },
-            'nsh_sh': {
-                'train': './proceed_dataset/covid19/nsh_sh.csv',
-                'test': './proceed_dataset/covid19/SH.tp-5wd-6.masked'
-            },
-            'nsc_sc': {
-                'train': './proceed_dataset/covid19/nsc_sc.csv',
-                'test': './proceed_dataset/covid19/SC.tp-5wd-6.masked'
-            },
-            'nwa_wa': {
-                'train': './proceed_dataset/covid19/nwa_wa.csv',
-                'test': './proceed_dataset/covid19/WA.tp-5wd-6.masked'
-            },
-            'sc_af': {
-                'train': './proceed_dataset/covid19/SC.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/AF.tp-5wd-6.masked'
-            },
-            'af_sh': {
-                'train': './proceed_dataset/covid19/AF.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/SH.tp-5wd-6.masked'
-            },
-            'sh_af': {
-                'train': './proceed_dataset/covid19/SH.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/AF.tp-5wd-6.masked'
-            },
-            'af_wa': {
-                'train': './proceed_dataset/covid19/AF.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/WA.tp-5wd-6.masked'
-            },
-            'wa_af': {
-                'train': './proceed_dataset/covid19/WA.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/AF.tp-5wd-6.masked'
-            },
-            'sh_sc': {
-                'train': './proceed_dataset/covid19/SH.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/SC.tp-5wd-6.masked'
-            },
-            'sc_sh': {
-                'train': './proceed_dataset/covid19/SC.tp-5wd-6.masked',
-                'test': './proceed_dataset/covid19/SH.tp-5wd-6.masked'
-            },
-            'dt_jb': {
-                'train': './proceed_dataset/pstance/trump.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/biden.tp-5wd-6.masked'
-            },
-            'jb_dt': {
-                'train': './proceed_dataset/pstance/biden.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/trump.tp-5wd-6.masked'
-            },
-            'dt_bs': {
-                'train': './proceed_dataset/pstance/trump.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/bernie.tp-5wd-6.masked'
-            },
-            'bs_dt': {
-                'train': './proceed_dataset/pstance/bernie.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/trump.tp-5wd-6.masked'
-            },
-            'bs_jb': {
-                'train': './proceed_dataset/pstance/bernie.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/biden.tp-5wd-6.masked'
-            },
-            'jb_bs': {
-                'train': './proceed_dataset/pstance/biden.tp-5wd-6.masked',
-                'test': './proceed_dataset/pstance/bernie.tp-5wd-6.masked'
-            },
-            'dt_hc': {
-                'train': './proceed_dataset/dt.masked',
-                'test': './proceed_dataset/hc.masked'
-            },
-            'hc_dt': {
-                'train': './proceed_dataset/hc.masked',
-                'test': './proceed_dataset/dt.masked'
-            },
-            'fm_la': {
-                'train': './proceed_dataset/fm.masked',
-                'test': './proceed_dataset/la.masked'
-            },
-            'la_fm': {
-                'train': './proceed_dataset/la.masked',
-                'test': './proceed_dataset/fm.masked'
-            },
-            'dt_tp': {
-                'train': './proceed_dataset/dt.masked',
-                'test': './proceed_dataset/tp.masked'
-            },
-            'tp_dt': {
-                'train': './proceed_dataset/tp.masked',
-                'test': './proceed_dataset/dt.masked'
-            },
-            'hc_tp': {
-                'train': './proceed_dataset/sem16/hc.tp-5wd-6.masked',
-                'test': './proceed_dataset/sem16/tp.tp-5wd-6.masked'
-            },
-            'tp_hc': {
-                'train': './proceed_dataset/sem16/tp.tp-5wd-6.masked',
-                'test': './proceed_dataset/sem16/hc.tp-5wd-6.masked'
-            },
-            'ndt_dt': {
-                'train': './proceed_dataset/n_dt.masked',
-                'test': './proceed_dataset/dt.masked'
-            },
-            'nat_at': {
-                'train': './proceed_dataset/n_at.masked',
-                'test': './proceed_dataset/at.masked'
-            },
-            'ncc_cc': {
-                'train': './proceed_dataset/n_cc.masked',
-                'test': './proceed_dataset/cc.masked'
-            },
-            'nfm_fm': {
-                'train': './proceed_dataset/n_fm.masked',
-                'test': './proceed_dataset/fm.masked'
-            },
-            'nhc_hc': {
-                'train': './proceed_dataset/n_hc.masked',
-                'test': './proceed_dataset/hc.masked'
-            },
-            'nla_la': {
-                'train': './proceed_dataset/n_la.masked',
-                'test': './proceed_dataset/la.masked'
             },
             'nac_ac': {
                 'train': './proceed_dataset/wtwt_mask/nac.masked',
