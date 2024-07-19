@@ -1,13 +1,10 @@
 import sys
 sys.path.append("..")
 
-from glob import glob
 import torch
 import torch.nn as nn
-import random
 import torch.nn.functional as F
-from transformers import BertConfig, BertTokenizer, BertModel, BertForMaskedLM, AutoTokenizer, \
-    BertForSequenceClassification
+from transformers import AutoTokenizer
 from torch.utils.data import DataLoader
 from sklearn import metrics
 from utils.data_utils import DatesetReader
@@ -33,7 +30,7 @@ class Instructor:
         self.best_val_prescision = None
         self.best_val_recall = None
         
-        # region 初始化模型
+        # region
         self.tokenizer = AutoTokenizer.from_pretrained(opt.plm)  # bert-base-uncased
         self.stance_dataset = DatesetReader(opt, self.tokenizer, dataset=opt.db)
         self.train_data_loader = DataLoader(self.stance_dataset.train_data, batch_size=opt.batch_size, shuffle=True)
