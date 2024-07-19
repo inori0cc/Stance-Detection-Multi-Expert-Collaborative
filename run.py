@@ -6,8 +6,8 @@ logging.set_verbosity_error()
 
 
 #bert-base-uncased
-class opt: maxlen = 128; device = 'cuda'; seed = None; log_step = 10; repeats = 2; plm = 'bert-base-uncased'; \
-        db = None; endurance = 4; batch_size = 64; num_epoch = 8; wd = 1e-5; lr = 2e-5; \
+class opt: maxlen = 128; device = 'cuda'; seed = None; log_step = 10; repeats = 5; plm = 'bert-base-uncased'; \
+        db = None; endurance = 4; batch_size = 64; num_epoch = 5; wd = 1e-5; lr = 2e-5; \
         hidden_dim = 768; mdim = 283; temperature = 0.2;\
         experts = 4; \
         bertConfig = AutoConfig.from_pretrained(plm)
@@ -20,10 +20,7 @@ if ps.db_name:
     opt.db = ps.db_name
 
 
-dbs = ['vast']
-# ['ndt_dt', 'nhc_hc', 'nfm_fm', 'nla_la', 'nat_at', 'ncc_cc']
-# ['nac_ac', 'nca_ca','nce_ce','nah_ah']
-# ['vast'] 
+dbs = ['nac_ac', 'nca_ca','nce_ce','nah_ah'] # ['vast'] 
 
 
 for db in dbs:
